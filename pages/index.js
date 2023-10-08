@@ -15,7 +15,6 @@ export default function Home() {
       <main>
         <Header title="Welcome to my app<3!" />
         <p className="description">
-          Get started by editing <code>pages/index.js. </code>
 	You are in {context.geo.country?.name}
 	</p>
       </main>

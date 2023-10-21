@@ -3,7 +3,7 @@ import { renderToReadableStream } from "https://esm.sh/react-dom/server";
 import type { Config, Context } from "@netlify/edge-functions";
 
 export default async function handler(req: Request, context: Context) {
-  global mylink = "//umap.openstreetmap.fr/en/map/swim-spots_955902?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false&captionMenus=true";
+  const mylink = "//umap.openstreetmap.fr/en/map/swim-spots_955902?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false&captionMenus=true";
   const stream = await renderToReadableStream(
     <html>
       <title>Hello</title>

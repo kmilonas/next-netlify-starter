@@ -9,6 +9,23 @@ export default async function handler(req: Request, context: Context) {
     <html>
       <head>
       <title>plunge.guide</title>
+
+      <style>
+        body {
+            //background-color: #1f2d3a; /* Dark blue background color */
+            font-family: 'Montserrat', sans-serif; /* Modern sans-serif font */
+            //color: white; /* Text color */
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+        }
+        h2 {
+            font-size: 24px;
+        }
+    </style>
+
+
     </head>
       <body>
         <h1>plunge.guide</h1>

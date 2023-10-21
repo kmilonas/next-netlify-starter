@@ -3,11 +3,13 @@ import { renderToReadableStream } from "https://esm.sh/react-dom/server";
 import type { Config, Context } from "@netlify/edge-functions";
 
 export default async function handler(req: Request, context: Context) {
+  let a0 = "http://"
+  let a1 = 'www.google.com'
   const stream = await renderToReadableStream(
     <html>
       <body>
-<iframe width="100%" height="300px" frameborder="0" allowfullscreen allow="geolocation" 
-src={`http://umap.openstreetmap.fr/en/map/swim-spots_955902?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false&captionMenus=true#7/58.119/18.787"></iframe><p><a href="//umap.openstreetmap.fr/en/map/swim-spots_955902?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=false&onLoadPanel=undefined&captionBar=false&captionMenus=true#7/${context.geo.latitude}/{context.geo.longitude}`}>
+<iframe width="100%" height="300px" frameborder="0"  
+src={a0}{a1}></iframe>
  </body>
     </html>
   );

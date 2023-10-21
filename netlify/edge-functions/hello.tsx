@@ -7,9 +7,16 @@ export default async function handler(req: Request, context: Context) {
   const mylink = mylink0 + context.geo.latitude + "/" + context.geo.longitude;
   const stream = await renderToReadableStream(
     <html>
+      <head>
+      <title>plunge.guide</title>
+    </head>
       <body>
+        <h1>plunge.guide</h1>
+      <h2>Guide to cold plunge spots, powered by you and the community</h2>
 
         <iframe width="100%" height="300px" frameborder="0" allowfullscreen allow="geolocation" src= {mylink}></iframe>
+        
+      <p>TBD</p>
       </body>
     </html>
   );

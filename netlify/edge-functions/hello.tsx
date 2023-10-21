@@ -5,13 +5,14 @@ import type { Config, Context } from "@netlify/edge-functions";
 export default async function handler(req: Request, context: Context) {
   const mylink0 = "//umap.openstreetmap.fr";
   const mylink1 = "/en/map/swim-spots_955902?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false&captionMenus=true";
+  const mylink = mylink0 + mylink1;
   const stream = await renderToReadableStream(
     <html>
       <title>Hello</title>
       <body>
         <h1>Hello {context.geo.country?.name}</h1>
 
-        <iframe width="100%" height="300px" frameborder="0" allowfullscreen allow="geolocation" src= {mylink0}{mylink1}></iframe>
+        <iframe width="100%" height="300px" frameborder="0" allowfullscreen allow="geolocation" src= {mylink}></iframe>
       </body>
     </html>
   );

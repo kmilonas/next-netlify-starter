@@ -5,24 +5,14 @@ import type { Config, Context } from "@netlify/edge-functions";
 export default async function handler(req: Request, context: Context) {
   const mylink0 = "//umap.openstreetmap.fr/en/map/swim-spots_955902?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=false&onLoadPanel=undefined&captionBar=false&captionMenus=true#7/";
   const mylink = mylink0 + context.geo.latitude + "/" + context.geo.longitude;
+  const mystyle = "body{  font-family: 'Montserrat', sans-serif; }"
   const stream = await renderToReadableStream(
     <html>
       <head>
       <title>plunge.guide</title>
 
       <style>
-        body {
-            //background-color: #1f2d3a; /* Dark blue background color */
-            font-family: 'Montserrat', sans-serif; /* Modern sans-serif font */
-            //color: white; /* Text color */
-            padding: 20px;
-        }
-        h1 {
-            font-size: 36px;
-        }
-        h2 {
-            font-size: 24px;
-        }
+        {mystyle}
     </style>
 
 

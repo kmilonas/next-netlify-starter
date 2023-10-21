@@ -23,7 +23,9 @@ export default async function handler(req: Request, context: Context) {
 
         <iframe width="100%" height="300px" frameborder="0" allowfullscreen allow="geolocation" src= {mylink}></iframe>
         
-      <p>TBD</p>
+      <p>
+      <a href = "https://sites.google.com/view/plungeguide-addspot/add-a-place-to-the-map">Add a place to the map</a>
+      </p>
       </body>
     </html>
   );

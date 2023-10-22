@@ -3,7 +3,7 @@ import { renderToReadableStream } from "https://esm.sh/react-dom/server";
 import type { Config, Context } from "@netlify/edge-functions";
 
 export default async function handler(req: Request, context: Context) {
-  const mylink0 = "//umap.openstreetmap.fr/en/map/swim-spots_955902?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=enabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=false&onLoadPanel=undefined&captionBar=false&captionMenus=true#7/";
+  const mylink0 = "https://umap.openstreetmap.fr/en/map/swim-spots_875791#"
   const mylink = mylink0 + context.geo.latitude + "/" + context.geo.longitude;
   const mystyle = "body{  font-family: sans-serif; }"
   const stream = await renderToReadableStream(
@@ -19,12 +19,17 @@ export default async function handler(req: Request, context: Context) {
     </head>
       <body>
         <h1>plunge.guide</h1>
-Instructions TBD
-        <iframe width="100%" height="300px" frameborder="0" allowfullscreen allow="geolocation" src= {mylink}></iframe>
+      <h2>Adding a place to the map is easy</h2>
+
+      <ol>
+  <li>Click the pen symbol in the top right of the map</li>
+  <li>Click the pin symbol in the menu that pops up in the top right</li>
+  <li>Put the pin at the location of your plunge spot. Tell the world how amazing it is and how to get there &#128522;
+</li>
+</ol>
+        <iframe width="80%" height="60%" frameborder="0" allowfullscreen allow="geolocation" src= {mylink}></iframe>
         
-      <p>
-      <a href = "https://sites.google.com/view/plungeguide-addspot/add-a-place-to-the-map">Add a place to the map</a>
-      </p>
+
       </body>
     </html>
   );

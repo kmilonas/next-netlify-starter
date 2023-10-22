@@ -24,7 +24,7 @@ export default async function handler(req: Request, context: Context) {
       <ol>
   <li>Click the pen symbol in the top right of the map</li>
   <li>Click the pin symbol in the menu that pops up in the top right</li>
-  <li>Put the pin at the location of your plunge spot. Tell the world how amazing it is and how to get there &#128522;
+  <li>Put the pin at the location of your plunge spot. Tell the world how amazing it is and how to get there :)
 </li>
 </ol>
         <iframe width="80%" height="100%" frameborder="0" allowfullscreen allow="geolocation" src= {mylink}></iframe>

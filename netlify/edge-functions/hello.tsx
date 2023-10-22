@@ -21,7 +21,7 @@ export default async function handler(req: Request, context: Context) {
         <h1>plunge.guide</h1>
       <h2>Guide to cold plunge spots, powered by you and the community</h2>
 
-        <iframe width="80%" height="60%" frameborder="0" allowfullscreen allow="geolocation" src= {mylink}></iframe>
+        <iframe width="80%" height="100%" frameborder="0" allowfullscreen allow="geolocation" src= {mylink}></iframe>
         
       <p>
       <a href = "https://lustrous-horse-2d03ff.netlify.app/addaplace">Add a place to the map</a>

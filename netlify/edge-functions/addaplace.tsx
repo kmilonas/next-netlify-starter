@@ -5,7 +5,8 @@ import type { Config, Context } from "@netlify/edge-functions";
 export default async function handler(req: Request, context: Context) {
   const mylink0 = "https://umap.openstreetmap.fr/en/map/swim-spots_875791#"
   const mylink = mylink0 + context.geo.latitude + "/" + context.geo.longitude;
-  const mystyle = "body{  font-family: sans-serif; }"
+  const mystyle = "body{font-family: sans-serif; }"
+  const myiframestyle = "{position: absolute; height: 60%; border: none}"
   const stream = await renderToReadableStream(
     <html>
       <head>
@@ -27,7 +28,7 @@ export default async function handler(req: Request, context: Context) {
   <li>Put the pin at the location of your plunge spot. Tell the world how amazing it is and how to get there :)
 </li>
 </ol>
-        <iframe width="80%" style="position: absolute; height: 60%; border: none" frameborder="0" allowfullscreen allow="geolocation" src= {mylink}></iframe>
+        <iframe width="80%" style={myiframestyle} frameborder="0" allowfullscreen allow="geolocation" src= {mylink}></iframe>
         
 
       </body>

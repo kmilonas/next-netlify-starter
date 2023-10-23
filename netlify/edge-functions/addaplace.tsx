@@ -7,8 +7,7 @@ export default async function handler(req: Request, context: Context) {
   const mylink = mylink0 + context.geo.latitude + "/" + context.geo.longitude;
   const mystyle =  `
   body{font-family: sans-serif; } 
-  iframe{height: 60vh; width: 60vw;} 
-  div{height: 60%;}`
+  iframe{height: 60vh; width: 60vw;} `
   //const myiframestyle = "{height: 60%;}"
   const stream = await renderToReadableStream(
     <html>

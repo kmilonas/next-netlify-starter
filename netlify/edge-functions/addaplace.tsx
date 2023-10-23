@@ -7,7 +7,7 @@ export default async function handler(req: Request, context: Context) {
   const mylink = mylink0 + context.geo.latitude + "/" + context.geo.longitude;
   const mystyle =  `
   body{font-family: sans-serif; } 
-  iframe{height: 60%;} 
+  iframe{height: 60vh; width: 60vw;} 
   div{height: 60%;}`
   //const myiframestyle = "{height: 60%;}"
   const stream = await renderToReadableStream(
@@ -31,7 +31,7 @@ export default async function handler(req: Request, context: Context) {
   <li>Put the pin at the location of your plunge spot. Tell the world how amazing it is and how to get there :)
 </li>
 </ol>
-        <iframe width="80%" height = "80%" frameborder="0" allowfullscreen allow="geolocation" src= {mylink}></iframe>
+        <iframe width="80vw" height = "80vh" frameborder="0" allowfullscreen allow="geolocation" src= {mylink}></iframe>
         
 
       </body>

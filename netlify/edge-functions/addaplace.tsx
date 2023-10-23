@@ -6,7 +6,7 @@ export default async function handler(req: Request, context: Context) {
   const mylink0 = "https://umap.openstreetmap.fr/en/map/swim-spots_875791#"
   const mylink = mylink0 + context.geo.latitude + "/" + context.geo.longitude;
   const mystyle = "body{font-family: sans-serif; } iframe{height: 60%;}"
-  const myiframestyle = "{height: 60%}"
+  const myiframestyle = "{height: 60%;}"
   const stream = await renderToReadableStream(
     <html>
       <head>

@@ -30,7 +30,7 @@ export default async function handler(req: Request, context: Context) {
   <li>Put the pin at the location of your plunge spot. Tell the world how amazing it is and how to get there :)
 </li>
 </ol>
-        <iframe width="80vw" height = "80vh" frameborder="0" allowfullscreen allow="geolocation" src= {mylink}></iframe>
+        <iframe width="80vw" height = "80vw" frameborder="0" allowfullscreen allow="geolocation" src= {mylink}></iframe>
         
 
       </body>

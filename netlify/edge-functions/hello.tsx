@@ -39,13 +39,14 @@ export default async function handler(req: Request, context: Context) {
       <body>
         <h1>plunge.guide</h1>
       <h2>Guide to cold plunge spots, powered by you and the community</h2>
-
+      <p>
+        Is your favorite spot missing? 
+      <a href = "https://lustrous-horse-2d03ff.netlify.app/addaplace">Add it to the map</a>
+      </p>
       <div class="container">
   <iframe class="responsive-iframe" frameborder="0" allowfullscreen allow="geolocation" src= {mylink}></iframe>
         </div>
-      <p>
-      <a href = "https://lustrous-horse-2d03ff.netlify.app/addaplace">Add a place to the map</a>
-      </p>
+     
       </body>
     </html>
   );

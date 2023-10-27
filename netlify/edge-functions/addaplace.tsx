@@ -7,8 +7,24 @@ export default async function handler(req: Request, context: Context) {
   const mylink = mylink0 + context.geo.latitude + "/" + context.geo.longitude;
   const mystyle =  `
   body{font-family: sans-serif; } 
-  iframe{height: 60vh; width: 60vw;} `
-  //const myiframestyle = "{height: 60%;}"
+  iframe{height: 60vh; width: 60vw;} 
+  .container {
+    position: relative;
+    overflow: hidden;
+    width: 75%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  }
+  
+  /* Then style the iframe to fit in the container div with full height and width */
+  .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }`
   const stream = await renderToReadableStream(
     <html>
       <head>
@@ -30,8 +46,9 @@ export default async function handler(req: Request, context: Context) {
   <li>Put the pin at the location of your plunge spot. Tell the world how amazing it is and how to get there :)
 </li>
 </ol>
-        <iframe width="80vw" height = "80vw" frameborder="0" allowfullscreen allow="geolocation" src= {mylink}></iframe>
-        
+<div class="container">
+  <iframe class="responsive-iframe" frameborder="0" allowfullscreen allow="geolocation" src= {mylink}></iframe>
+    </div>    
 
       </body>
     </html>

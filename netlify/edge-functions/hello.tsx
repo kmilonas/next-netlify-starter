@@ -43,8 +43,8 @@ export default async function handler(req: Request, context: Context) {
         Is your favorite spot missing? 
       <a href = "https://lustrous-horse-2d03ff.netlify.app/addaplace">Add it to the map</a>
       </p>
-      <p align="center"></p>
       <div class="container">
+      <p align="center"></p>
   <iframe class="responsive-iframe" frameborder="0" allowfullscreen allow="geolocation" src= {mylink}></iframe>
        </p> </div>
      

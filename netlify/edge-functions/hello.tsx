@@ -24,6 +24,7 @@ export default async function handler(req: Request, context: Context) {
     right: 0;
     width: 100%;
     height: 100%;
+    display: block;
   }`
   const stream = await renderToReadableStream(
     <html>
@@ -44,9 +45,8 @@ export default async function handler(req: Request, context: Context) {
       <a href = "https://lustrous-horse-2d03ff.netlify.app/addaplace">Add it to the map</a>
       </p>
       <div class="container">
-      <p align="center"></p>
   <iframe class="responsive-iframe" frameborder="0" allowfullscreen allow="geolocation" src= {mylink}></iframe>
-       </p> </div>
+       </div>
      
       </body>
     </html>

@@ -7,7 +7,7 @@ export default async function handler(req: Request, context: Context) {
   const mylink = mylink0 + context.geo.latitude + "/" + context.geo.longitude;
   const mystyle =  `
   body{font-family: sans-serif; } 
-  iframe{height: 60vh; width: 60vw;} 
+  iframe{height: 60vh; width: 60vw; display: block;} 
   .container {
     position: relative;
     overflow: hidden;
@@ -50,7 +50,7 @@ export default async function handler(req: Request, context: Context) {
      
       </body>
     </html>
-  );
+  ); q
 
   return new Response(stream, {
     status: 200,

@@ -24,7 +24,6 @@ export default async function handler(req: Request, context: Context) {
     right: 0;
     width: 100%;
     height: 100%;
-    display: block;
   }`
   const stream = await renderToReadableStream(
     <html>

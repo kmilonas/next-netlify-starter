@@ -49,7 +49,7 @@ export default async function handler(req: Request, context: Context) {
      
       </body>
     </html>
-  ); q
+  ); 
 
   return new Response(stream, {
     status: 200,

@@ -3,7 +3,7 @@ import { renderToReadableStream } from "https://esm.sh/react-dom/server";
 import type { Config, Context } from "@netlify/edge-functions";
 
 export default async function handler(req: Request, context: Context) {
-  const mylink0 = "https://umap.openstreetmap.fr/en/map/swim-spots_875791#"
+  const mylink0 = "https://umap.openstreetmap.fr/en/map/swim-spots_955902#"
   const mylink = mylink0 + context.geo.latitude + "/" + context.geo.longitude;
   const mystyle =  `
   body{font-family: sans-serif; } 

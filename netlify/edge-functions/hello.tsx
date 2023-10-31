@@ -27,11 +27,9 @@ export default async function handler(req: Request, context: Context) {
     display: block;
   }`
   const h2 = "Guide to cold plunge spots, powered by you and the community";
-  const addaplace = `
-  <p>
-        Is your favorite spot missing? 
-      <a href = "https://plungeguide.netlify.app/addaplace">Add it to the map</a>
-      </p>`;
+  const ismissing = "Is your favorite spot missing?";
+  const addmap = "Add it to the map";
+  
   const stream = await renderToReadableStream(
     <html>
       <head>
@@ -46,7 +44,10 @@ export default async function handler(req: Request, context: Context) {
       <body>
         <h1>plunge.guide</h1>
       <h2> {h2} </h2>
-      {addaplace}
+      <p>
+      {ismissing}
+      <a href = "https://plungeguide.netlify.app/addaplace">{addmap}</a>
+      </p>
       <div class="container">
   <iframe class="responsive-iframe" frameborder="0" allowfullscreen allow="geolocation" src= {mylink}></iframe>
        </div>

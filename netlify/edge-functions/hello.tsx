@@ -26,6 +26,7 @@ export default async function handler(req: Request, context: Context) {
     height: 100%;
     display: block;
   }`
+  const h2 = "Guide to cold plunge spots, powered by you and the community";
   const stream = await renderToReadableStream(
     <html>
       <head>
@@ -39,7 +40,7 @@ export default async function handler(req: Request, context: Context) {
     </head>
       <body>
         <h1>plunge.guide</h1>
-      <h2>Guide to cold plunge spots, powered by you and the community</h2>
+      <h2> {h2} </h2>
       <p>
         Is your favorite spot missing? 
       <a href = "https://lustrous-horse-2d03ff.netlify.app/addaplace">Add it to the map</a>

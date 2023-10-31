@@ -31,7 +31,7 @@ export default async function handler(req: Request, context: Context) {
   <p>
         Is your favorite spot missing? 
       <a href = "https://plungeguide.netlify.app/addaplace">Add it to the map</a>
-      </p>`
+      </p>`;
   const stream = await renderToReadableStream(
     <html>
       <head>

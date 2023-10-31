@@ -30,9 +30,9 @@ export default async function handler(req: Request, context: Context) {
   const ismissing = ""
   const addmap = ""
   if (context.geo.country.code =="SE"){
-    const h2 = "Guide till vinterbad, skapat av dig och andra simmare!";
-    const ismissing = "Saknas din favoritvak?";
-    const addmap = "Lägg till den på kartan";
+    //const h2 = "Guide till vinterbad, skapat av dig och andra simmare!";
+    //const ismissing = "Saknas din favoritvak?";
+    //const addmap = "Lägg till den på kartan";
   } else{
      h2 = "Guide to cold plunge spots, powered by you and the community";
      ismissing = "Is your favorite spot missing?";

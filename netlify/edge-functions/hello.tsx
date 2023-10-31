@@ -26,10 +26,15 @@ export default async function handler(req: Request, context: Context) {
     height: 100%;
     display: block;
   }`
-  const h2 = "Guide to cold plunge spots, powered by you and the community";
-  const ismissing = "Is your favorite spot missing?";
-  const addmap = "Add it to the map";
-  
+  if (context.geo.country.code =="SE"){
+    const h2 = "Guide till vinterbad, skapat av dig och andra simmare!";
+    const ismissing = "Saknas din favoritvak?";
+    const addmap = "Lägg till den på kartan";
+  } else{
+    const h2 = "Guide to cold plunge spots, powered by you and the community";
+    const ismissing = "Is your favorite spot missing?";
+    const addmap = "Add it to the map";
+  }
   const stream = await renderToReadableStream(
     <html>
       <head>

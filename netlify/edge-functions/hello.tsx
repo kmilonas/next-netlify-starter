@@ -27,7 +27,7 @@ export default async function handler(req: Request, context: Context) {
     display: block;
   }`
   const h2 = "Guide to cold plunge spots, powered by you and the community";
-  const addaplae = `
+  const addaplace = `
   <p>
         Is your favorite spot missing? 
       <a href = "https://plungeguide.netlify.app/addaplace">Add it to the map</a>

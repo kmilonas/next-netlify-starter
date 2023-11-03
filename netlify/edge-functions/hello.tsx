@@ -60,6 +60,10 @@ export default async function handler(req: Request, context: Context) {
   <iframe class="responsive-iframe" frameborder="0" allowfullscreen allow="geolocation" src= {mylink}></iframe>
        </div>
      
+       <p>
+  Comments? plungeguide [at] gmail [dot] com
+</p>
+
       </body>
     </html>
   ); 

@@ -52,7 +52,9 @@ export default async function handler(req: Request, context: Context) {
 
   </p>
     </div>    
-
+<p>
+  Comments? plungeguide [at] gmail [dot] com
+</p>
       </body>
     </html>
   );
